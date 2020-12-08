@@ -1,0 +1,27 @@
+<div [ngClass]="{'myclass':flag}">
+welcome {{name}} :{{sal}} {{flag}}
+<button name="btn" (click)="onclickflag()">click me</button>
+<div *ngIf="flag">
+<input type="text" name="nm" [(ngModel)]="name">
+
+</div>
+{{p.id}}  {{p.name}} {{p.desg}} {{p.dept}}
+</div>
+<hr>
+<div  *ngIf="flag">
+<table border="2" [ngClass]="{'myc1':flag1,'myc2':!flag1}">
+    <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>Designation</th>
+        <th>Department</th>
+    </tr>
+    <tr *ngFor="let p of parr">
+        <td>{{p.id}}</td><td>{{p.name}}</td>
+        <td>{{p.desg}}</td>
+        <td>{{p.dept}}</td>
+</tr>
+</table>
+</div>
+<hr>
+<pform></pform>
